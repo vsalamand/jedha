@@ -1,0 +1,26 @@
+{% extends 'layout.html'%}
+{% block content %}
+
+  <body>
+    <header class="full-header">
+        <div class="main-nav container p-2">
+           <ul class="nav">
+            <li class="name"><a href="index.html">MOKAIO</a></li>
+          </ul>
+        </div>
+        <div class="center-content">
+          <div class="value-prop">
+            {% if name %}
+            <h1 class="title m-5">Merci pour votre intérêt {{ name }}, vous serez recontacté d'ici 24h</h1>
+            {% else %}
+            <h1 class="title m-5">Merci pour votre intérêt, vous serez recontacté d'ici 24h</h1>
+            {% endif %}
+            <div class="d-flex flex-direction-row justify-content-center">
+              <a class ="CTA-projet m-5 col-md-12" href="{{ url_for('index') }}">Menu Principal</a>
+            </div>
+          </div>
+        </div>
+      </header>
+  </body>
+
+{% endblock %}
